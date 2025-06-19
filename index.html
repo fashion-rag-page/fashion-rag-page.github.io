@@ -72,7 +72,10 @@
                   <div class="is-size-5 publication-authors">
                     <span class="author-block"><sup>1</sup>University of Modena and Reggio Emilia<br></span>
                     <span class="author-block"><sup>2</sup>University of Pisa<br></span>
-                    IJCNN 2025
+                    <div>
+                      International Joint Conference on Neural Networks (IJCNN) 2025<br>
+                      <span style="color: red;">Oral Presentation</span>
+                    </div>
                   </div>
 
                   <div class="column has-text-centered">
@@ -145,14 +148,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/images/retrieve_demo.png"
-        type="video/mp4">
-      </video>
-      <!-- <h2 class="subtitle has-text-centered">
+      <img src="static/images/retrieve_demo.png" alt="Teaser Image" style="width: 50%; height: auto; display: block; margin: 0 auto;">
+      <!--
+      <h2 class="subtitle has-text-centered">
         Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2> -->
+      </h2>
+      -->
     </div>
   </div>
 </section>
@@ -195,24 +196,37 @@
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
+      <h2 class="title has-text-centered">Method</h2>
 
-      <img src="static/images/model.png" width="100%" height="550" alt="Poster Image">
+      <img src="static/images/model.png" style="width: 80%; height: auto; display: block; margin: 0 auto;" alt="Poster Image">
+      <figcaption class="has-text-centered is-size-6 mt-2">
+        Overview of the proposed retrieval-augmented multimodal fashion image editing framework. 
+        The model leverages a diffusion-based inpainting pipeline, taking as input a masked reference image, 
+        a pose map, a binary mask indicating the editable region, and multimodal conditioning signals, 
+        including text descriptions and retrieved garments. Retrieved garments are projected into the CLIP textual 
+        space and combined with the textual embeddings to enhance the U-Net cross-attention mechanism. 
+        The U-Net iteratively denoises the latent representation over multiple steps, 
+        and the VAE decoder generates the final image.
+      </figcaption>
         
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 <!--End paper poster -->
 
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
+      <h2 class="title has-text-centered">Visual Comparisons</h2>
 
       <figure>
-        <img src="static/images/Image2.png" width="100%" height="550" alt="Poster illustrating the Fashion-RAG model pipeline">
+        <img src="static/images/Image2.png" style="width: 80%; height: auto; display: block; margin: 0 auto;" alt="Poster illustrating the Fashion-RAG model pipeline">
         <figcaption class="has-text-centered is-size-6 mt-2">
           Our method mitigates existing problems such as wrong color transfer and shape mismatch by using a retrieval-augmented generation approach.
+          Previous method struggle to transfer some visual attributes to the model image vecause they are constrained to one single input 
+          garment. Moreover, the garment item is provided by the user. In contrast, we relax the second assuption, requiring only text
+          description of the garment to be edited. Our approach leverages the flexibility introduced by our RAG framework and 
+          succesfully mixes up features from different garments.
         </figcaption>
       </figure>
 
@@ -224,18 +238,14 @@
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item has-text-centered">
-          <figure>
-            <img src="static/images/carousel1.jpg" alt="Descriptive text for the first image" />
-            <figcaption class="subtitle mt-2">
-              We demostrate the effectiveness of our method on the Dress Code dataset, showing that 
-              Fashion-RAG can scale up to three retrieved garments
-            </figcaption>
-          </figure>
-        </div>
-      </div>
+    <div class="container has-text-centered">
+      <figure>
+        <img src="static/images/Fig3.png" style="width: 70%; height: auto; display: block; margin: 0 auto;" alt="Descriptive text for the first image" />
+        <figcaption class="has-text-centered is-size-6 mt-2">
+          We demonstrate the effectiveness of our method on the Dress Code dataset, showing that 
+          Fashion-RAG improves with the number of retrieved images and can scale up to three retrieved garments.
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -265,7 +275,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Fashion-RAG: Multimodal Fashion Image Editing via Retrieval-Augmented Generation Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic-project-page-template Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
